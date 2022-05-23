@@ -1,0 +1,45 @@
+.select-items {
+    background-image: url("../../assests/images/bg-triangle.svg");
+    visibility: visible;
+    width: 476px;
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    /* align-items: center; */
+}
+.center {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+  .rock-hand {
+      display: flex;
+      justify-content: space-between;
+  }
+  .select-items button  {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.select-items .paper {
+    border: 20px solid hsl(230, 89%, 62%) ;
+    box-shadow: 5px 5px 0 0 hsl(230, 89%, 65%),
+    5px 5px 0 0  #bebebe inset;
+}
+.select-items .rock {
+    border: 20px solid  hsl(349, 71%, 52%);
+    box-shadow: 5px 5px 0 0 hsl(349, 70%, 56%),
+    5px 5px 0 0  #bebebe inset;
+}
+.select-items .scissors {
+    border: 20px solid hsl(39, 89%, 49%) ;
+    box-shadow: 5px 5px 0 0 hsl(40, 84%, 53%),
+    5px 5px 0 0  #bebebe inset;
+}
+  .select-items img {
+    /* width: 100px;
+    height: 100px; */
+  }
