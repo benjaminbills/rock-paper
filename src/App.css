@@ -15,4 +15,64 @@ body {
   align-items: center;
   flex-direction: column;
 }
+.rules-section {
+  background-color: white;
+  opacity: 1;
+}
+.rules {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: none;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  color: white;
+  border: 1px solid white;
+}
+.rules-header {
+  display: flex;
+  justify-content: space-between;
+}
+.rules-header h1 {
+  color:var(--dark-text) ;
+}
+.rules-header button {
+  all: unset;
+  cursor: pointer;
+}
+.Overlay {
+
+  opacity: .96;
+
+}
+.rules-image svg {
+  fill: white;
+}
+.game-type {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: none;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  color: white;
+  border: 1px solid white;
+}
+/* @media only screen and (max-width: 375px) {
+  body {
+  }
+  .rules-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .rules-header button {
+    position: absolute;
+    padding-top: 350px;    
+  }
+} */
+
 /* - Radial Gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%) */

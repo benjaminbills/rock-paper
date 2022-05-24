@@ -1,7 +1,7 @@
 .select-items {
     background-image: url("../../assests/images/bg-triangle.svg");
     visibility: visible;
-    width: 476px;
+    width: 500px;
     height: 350px;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,27 +19,99 @@
       display: flex;
       justify-content: space-between;
   }
-  .select-items button  {
+  .select-items button, .result button  {
     width: 150px;
     height: 150px;
     border-radius: 50%;
 }
-.select-items .paper {
-    border: 20px solid hsl(230, 89%, 62%) ;
+.result button  {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.empty-circle {
+    background-color: rgba(0, 0, 0, .3);
+    border: none;
+}
+.paper {
+    border: 25px solid hsl(230, 89%, 62%) ;
     box-shadow: 5px 5px 0 0 hsl(230, 89%, 65%),
     5px 5px 0 0  #bebebe inset;
 }
-.select-items .rock {
-    border: 20px solid  hsl(349, 71%, 52%);
+
+
+.rock {
+    border: 25px solid  hsl(349, 71%, 52%);
     box-shadow: 5px 5px 0 0 hsl(349, 70%, 56%),
     5px 5px 0 0  #bebebe inset;
 }
-.select-items .scissors {
-    border: 20px solid hsl(39, 89%, 49%) ;
+.scissors {
+    border: 25px solid hsl(39, 89%, 49%) ;
     box-shadow: 5px 5px 0 0 hsl(40, 84%, 53%),
     5px 5px 0 0  #bebebe inset;
 }
-  .select-items img {
-    /* width: 100px;
-    height: 100px; */
+.spock {
+    border: 25px solid hsl(189, 59%, 53%) ;
+    box-shadow: 5px 5px 0 0 hsl(189, 58%, 57%),
+    5px 5px 0 0  #bebebe inset;
+}
+.lizard {
+    border: 25px solid hsl(261, 73%, 60%) ;
+    box-shadow: 5px 5px 0 0 hsl(261, 72%, 63%),
+    5px 5px 0 0  #bebebe inset;
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 600px;
+}
+#play-again {
+    all: unset;
+    cursor: pointer;
+    background-color: white;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    color: var(--dark-text);
+ 
+}
+#play-again:hover {
+    color: red;
+}
+
+.mid-section {
+    padding-top: 120px;
+}
+.text-heading {
+    text-align: center;
+    color: var(--header-outline);
+    font-weight: var(--md-weights-font);
+    padding-bottom: 20px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.result-text {
+    text-align: center;
+    color: var(--header-outline);
+    margin-bottom: 5px;
+    font-weight: var(--md-weights-font);
+}
+
+.win {
+    animation: ripple 0.6s linear infinite;
+}
+
+.empty-circle {
+
+}
+  /* ripple effect */
+  @keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 0 rgba(237, 243, 237, 0.1), 0 0 0 40px rgba(237, 243, 237,  0.1), 0 0 0 70px rgba(237, 243, 237,  0.1), 0 0 0 100px rgba(237, 243, 237,  0.1);
+    }
+    100% {
+      box-shadow: 0 0 0 40px rgba(237, 243, 237,  0.1), 0 0 0 70px rgba(237, 243, 237,  0.1), 0 0 0 100px rgba(237, 243, 237,  0.1), 0 0 0 120px rgba(237, 243, 237,  0);
+    }
   }

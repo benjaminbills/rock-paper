@@ -1,12 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Header.css'
-function Header() {
+const Header =({score}) => {
+
   return (
     <div className='header'>
         <div><span id='break-words'>Rock Paper Scissors</span></div>
         <div>
             <button className='score-box'>
-                <span>Score</span> <br/> <span className='score'>12</span>
+                <span>Score</span> <br/> <span className='score'>{score}</span>
             </button>
         </div>
     </div>

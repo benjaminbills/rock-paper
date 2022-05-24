@@ -3,11 +3,14 @@ import Triangle from '../../assests/images/bg-triangle.svg'
 import Paper from '../../assests/images/icon-paper.svg'
 import Scissors from '../../assests/images/icon-scissors.svg'
 import Rock from '../../assests/images/icon-rock.svg'
+import Lizard from '../../assests/images/icon-lizard.svg'
+import Spock from '../../assests/images/icon-spock.svg'
+import './Advanced.css'
 
-import './Selection.css'
-const  Selection = ({score, setScore}) => {
+
+const Advanced = ({score, setScore}) => {
     const [userChoice, setUserChoice] = useState(null)
-    const choices = ['rock','paper', 'scissors']
+    const choices = ['rock','paper','lizard','spock', 'scissors']
     const [computerChoice, setComputerChoice] = useState(null)
     const [result, setResult] = useState(null)
     const [userWin, setUserWin] = useState(false)
@@ -32,16 +35,32 @@ const  Selection = ({score, setScore}) => {
     const checkResult = () => {
         switch(userChoice + computerChoice) {
             case 'scissorspaper':
-            case 'rockscissors':
             case 'paperrock':
+            case 'rocklizard':
+            case 'lizardspock':
+            case 'spockscissors':
+            case 'paperspock':
+            case 'scissorslizard':
+            case 'spockrock':
+            case 'lizardpaper':
+            case 'rockscissors':
                 setResult('You Win')
                 setUserWin(true)
                 setComputerWin(false)
                 setScore(score+1)
                 break
-            case 'paperscissors':
-            case 'scissorsrock':
+            case 'scissorsspock':
+            case 'spocklizard':
+            case 'lizardrock':
             case 'rockpaper':
+            case 'paperscissors':
+            case 'spockpaper':
+            case 'lizardscissors':
+            case 'rockspock':
+            case 'paperlizard':
+            case 'scissorsrock':
+
+
                 setResult("You Lose")
                 setUserWin(false)
                 setComputerWin(true)
@@ -49,6 +68,8 @@ const  Selection = ({score, setScore}) => {
             case 'rockrock':
             case 'scissorsscissors':
             case 'paperpaper':
+            case 'spockspock':
+            case 'lizardlizard':
                 setResult("It's a draw")
                 setUserWin(false)
                 setComputerWin(false)
@@ -70,19 +91,28 @@ const  Selection = ({score, setScore}) => {
        <div>
 
         {!selected ? (
-            <div className='select-items'>
+            <div className='advanced-select-items'>
              
-            <div className='rock-hand'>
-                <button onClick={()=>handleClicked('paper')} className='paper'>
+            <div className='top-button'>
+                <button onClick={()=>handleClicked('paper')} className='ad-paper'>
                     <img src={Paper} alt='paper' />
                 </button>
-                <button onClick={()=>handleClicked('rock')} className='rock'>
+               
+            </div>
+            <div className='center-button'>
+            <button onClick={()=>handleClicked('rock')} className='ad-rock'>
                     <img src={Rock} alt='rock' />
                 </button>
+                <button onClick={()=>handleClicked('lizard')} className='ad-lizard'>
+                    <img src={Lizard} alt='lizard' />
+                </button>
             </div>
-            <div className='center' >
-                <button onClick={()=>handleClicked('scissors')} className='scissors'>
+            <div className='bottom-button' >
+                <button onClick={()=>handleClicked('scissors')} className='ad-scissors'>
                     <img src={Scissors} alt='scissors' />
+                </button>
+                <button onClick={()=>handleClicked('spock')} className='ad-spock'>
+                    <img src={Spock} alt='spock' />
                 </button>
             </div>      
         </div>
@@ -97,6 +127,12 @@ const  Selection = ({score, setScore}) => {
                         </button>}
                         {userChoice === 'scissors'&& <button className={userWin?'scissors win':'scissors'}>
                             <img src={Scissors} alt='scissors' />
+                        </button>}
+                        {userChoice === 'lizard'&& <button className={userWin?'lizard win':'lizard'}>
+                            <img src={Lizard} alt='lizard' />
+                        </button>}
+                        {userChoice === 'spock'&& <button className={userWin?'spock win':'spock'}>
+                            <img src={Spock} alt='spock' />
                         </button>}
                     </div>
                     {!emptyCircle && 
@@ -118,6 +154,12 @@ const  Selection = ({score, setScore}) => {
                         {computerChoice === 'scissors'&& <button className={computerWin?'scissors win':'scissors'}>
                             <img src={Scissors} alt='scissors' />
                         </button>}
+                        {computerChoice === 'lizard'&& <button className={computerWin?'lizard win':'lizard'}>
+                            <img src={Lizard} alt='lizard' />
+                        </button>}
+                        {computerChoice === 'spock'&& <button className={computerWin?'spock win':'spock'}>
+                            <img src={Spock} alt='spock' />
+                        </button>}
                     </div>
                 </div>
             }
@@ -125,4 +167,4 @@ const  Selection = ({score, setScore}) => {
   )
 }
 
-export default Selection
+export default Advanced

@@ -1,0 +1,66 @@
+.advanced-select-items {
+    background-image: url("../../assests/images/bg-pentagon.svg");
+    visibility: visible;
+    width: 500px;
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding-top: 10px;
+    /* align-items: center; */
+}
+.top-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center-button {
+    margin-top: -25px;
+    display: flex;
+    justify-content: space-between;
+}
+.bottom-button {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.ad-scissors{
+    margin-left: 60px;
+}
+.ad-spock {
+    margin-right:60px
+}
+.ad-paper, .ad-rock, .ad-scissors,.ad-spock,.ad-lizard {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.ad-paper {
+    border: 15px solid hsl(230, 89%, 62%) ;
+    box-shadow: 5px 5px 0 0 hsl(230, 89%, 65%),
+    5px 5px 0 0  #bebebe inset;
+}
+
+
+.ad-rock {
+    border: 15px solid  hsl(349, 71%, 52%);
+    box-shadow: 5px 5px 0 0 hsl(349, 70%, 56%),
+    5px 5px 0 0  #bebebe inset;
+}
+.ad-scissors {
+    border: 15px solid hsl(39, 89%, 49%) ;
+    box-shadow: 5px 5px 0 0 hsl(40, 84%, 53%),
+    5px 5px 0 0  #bebebe inset;
+}
+.ad-spock {
+    border: 15px solid hsl(189, 59%, 53%) ;
+    box-shadow: 5px 5px 0 0 hsl(189, 58%, 57%),
+    5px 5px 0 0  #bebebe inset;
+}
+.ad-lizard {
+    border: 15px solid hsl(261, 73%, 60%) ;
+    box-shadow: 5px 5px 0 0 hsl(261, 72%, 63%),
+    5px 5px 0 0  #bebebe inset;
+}
