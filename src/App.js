@@ -34,6 +34,7 @@ function App() {
   const changeGame =() => {
     console.log('workind');
     setChangeGameType(!changeGameType)
+    setScore(0)
   }
 
   return (
